@@ -1,12 +1,12 @@
 {
-    "name": "openboleto/openboleto",
+    "name": "danielopes7/openboleto",
     "type": "library",
     "description": "Biblioteca para geração de boletos bancários.",
     "keywords": [
         "boleto",
         "boleto bancario"
     ],
-    "homepage": "http://github.com/openboleto/openboleto",
+    "homepage": "https://github.com/Danielopes7/openboleto-7.3",
     "license": "MIT",
     "authors": [
         {
@@ -20,11 +20,15 @@
         {
             "name": "Rogerio Muniz",
             "email": "rogerio@quilhasoft.com.br"
+        },
+        {
+            "name": "Daniel Lopes",
+            "email": "danielopesdev@gmail.com"
         }
     ],
     "require": {
-        "php": ">=7.4",
-        "chillerlan/php-qrcode": "^5.0"
+        "php": ">=7.3",
+        "chillerlan/php-qrcode": "^3.4.1"
     },
     "autoload": {
         "psr-4": {
