@@ -13,11 +13,8 @@ Se esse projeto te auxiliou de alguma forma, você pode contribuir financeiramen
 ## Instalação
 
 ### Composer
-
-Se você já conhece o **Composer** (o que é extremamente recomendado), simplesmente adicione a dependência abaixo à diretiva _"require"_ em seu **composer.json**:
-
 ```
-"openboleto/openboleto": "dev-master"
+composer require danielopes7/openboleto
 ```
 
 ### PSR-0 autoloader
