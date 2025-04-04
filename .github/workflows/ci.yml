@@ -1,39 +1,35 @@
-name: Pipeline
+name: Pipeline PHP 7.3
+
 on:
   push:
     branches:
       - master
-
   pull_request:
     branches:
       - master
 
 jobs:
-  testsuite:
-    name: Testes Automatizados
+  testsuite-php73:
+    name: Testes Automatizados - PHP 7.3
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: ["7.4", "8.0", "8.1", "8.2", "8.3"]
 
     steps:
-      - name: Setup PHP
+      - name: Setup PHP 7.3
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-version }}
+          php-version: 7.3
 
-      - name: checkout
+      - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Composer Install
+      - name: Instalar dependências via Composer
         run: |
           composer install --no-progress -o --no-ansi --no-interaction
 
-      - name: Análises estáticas
+      - name: Rodar análises estáticas
         run: |
           composer stan
 
-      - name: Rodando PHPUnit
+      - name: Rodar PHPUnit
         run: |
           composer test
